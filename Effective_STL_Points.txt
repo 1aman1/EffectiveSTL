@@ -20,9 +20,6 @@ make a container of type T*, instead of container of type T.
 make it a habit because empty maybe implemented as an inline in different category of containers, it still fundamentlly relies on what container it is.
 on the same note, if a list has to check size() == 0, it will turn to a linear time call.
 
-> Item 5 :
-assign member function, a convenient beast that too many programmers overlook. It's available for all the standard sequence containers (vector, string, deque, and list).
-Range member functions tend to lead to code that is clearer and more straightforward
 
-Too many STL programmers overuse copy, so the advice I just gave bears repeating: Almost all uses of copy where the destination range is specified using an insert iterator should be replaced with calls to range member functions.
 
+> Item 6:
