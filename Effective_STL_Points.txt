@@ -1,0 +1,28 @@
+Containers:-
+
+
+> Item 1 : choose containers with care 
+different requirements in depth, may describe what type of container is best suiited for it.
+Associative / sequence / hashed Associative / hashed sequence
+
+
+> Item 2 : container independent code
+A code written to an abstraction levell where one may want to change the underlying type of container and expect the rest of the code to work as it used to.
+This doesn't lead to fruitful outcome, because no matter what one does, they will have to implement the code using capabilities in intersection of two container types they use. 
+This is because many operations exist for one category container, 
+i.e., no push_back in map/ Associative container , like that.
+
+
+> Item 3 : make copying cheap & correct
+make a container of type T*, instead of container of type T.
+
+> Item 4 : Call empty instead of size() == 0 
+make it a habit because empty maybe implemented as an inline in different category of containers, it still fundamentlly relies on what container it is.
+on the same note, if a list has to check size() == 0, it will turn to a linear time call.
+
+> Item 5 :
+assign member function, a convenient beast that too many programmers overlook. It's available for all the standard sequence containers (vector, string, deque, and list).
+Range member functions tend to lead to code that is clearer and more straightforward
+
+Too many STL programmers overuse copy, so the advice I just gave bears repeating: Almost all uses of copy where the destination range is specified using an insert iterator should be replaced with calls to range member functions.
+
