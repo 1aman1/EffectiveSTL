@@ -1,6 +1,11 @@
 
 Choose your containers with care -
 
+%% GIST - your requirements may silently be telling you which container specifically they need.
+
+Different requirements when understood in depth, may describe what type of container is best suited for them.
+Associative / sequence / hashed Associative / hashed sequence
+
 • Standard STL sequence containers @ vector, string, deque, list.
 
 • Standard STL associative containers @ map, multimap, set, multiset.
