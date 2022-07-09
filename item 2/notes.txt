@@ -1,6 +1,8 @@
 
 Beware the illusion of container-independent code.
 
+%% GIST - same code can accomodate all kinds of containers is an expensive myth. 
+
 • The STL is based on generalization. Arrays are generalized into containers and parameterized on the types of objects they contain. Functions are generalized into algorithms and parameterized on the types of iterators they use. Pointers are generalized into iterators and parameterized on the type of objects they point to.
 
 • That's just the beginning. Individual container types are generalized into sequence and associative containers, and similar containers are given similar functionality. Standard contiguous-memory containers offer random-access iterators, while standard node-based containers provide bidirectional iterators. Sequence containers support push_front and/or push_back, while associative containers don't. Associative containers offer logarithmic-time lower_bound, upper_bound, and equal_range member functions, but sequence containers don't. 
