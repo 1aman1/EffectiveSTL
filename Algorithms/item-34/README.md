@@ -15,4 +15,3 @@ __Note which algorithms expect sorted ranges__
 * In practice, unique is usually employed to eliminate all duplicate values from a range, so you'll almost always want to make sure that the range you pass unique is sorted.
 
 * If you pass a sorted range to an algorithm that also takes a comparison function, be sure that the comparison function you pass behaves the same as the one you used to sort the range.
-

@@ -14,7 +14,7 @@ __Know your sorting options__
 
 * partial_sort is not stable. Neither is nth_element, sort, too, fails to offer stability, but there is an algorithm, stable_sort.
 
-* to move all the Widgets with a quality rating of 2 or better to the front of widgets, we can use a fn that identifies widgets that qualify using the help of partition. If relevant ordering is important for equivalent widgets, use stable_partition.
+* to move all the Widgets with a quality rating of 2 or better to the front of widgets, we can use a function that identifies widgets that qualify using the help of partition. If relevant ordering is important for equivalent widgets, use stable_partition.
 
 * The algorithms sort, stable_sort, partial_sort, and nth_element require random access iterators, so they may be applied only to vectors, strings, deques, and arrays.
 
