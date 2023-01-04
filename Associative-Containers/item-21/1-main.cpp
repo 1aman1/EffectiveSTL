@@ -5,36 +5,23 @@
 
 using namespace std;
 
-void print(const string *ps) // print to cout the
-{                            // object pointed to
-    cout << *ps << endl;     // by ps
-}
+void print(const int x) { cout << x << " "; }
 
 int main()
 {
 
-    // set<string *> ssp; // ssp = "set of string ptrs"
+    set<int, less_equal<int>> s;
+    s.insert(10);
 
-    set<string *, less<string *>> ssp;
+    s.insert(10);
 
-    ssp.insert(new string("Wombat"));
-    ssp.insert(new string("Lemur"));
-    ssp.insert(new string("Penguin"));
-    ssp.insert(new string("Anteater"));
+    // set carries two different copies now, based on comparison function that we provided and how it evaluated internally looks like below
 
-    // INCOMPATIBLE BECAUSE OF PTR TO STRING, INSTEAD OF STRING
-    
-    // copy(ssp.begin(), ssp.end(),
-    //      ostream_iterator<string>(cout, "\n"));
+    // !(10A<= 10B)&&!(10B<= 10A) => false
 
-    // PRINTS HEXADECIMAL ADDRESSES
+    for_each(begin(s), end(s), print);
 
-    // for (set<string *>::const_iterator i = ssp.begin(); // you expect to see
-    //      i != ssp.end();                                // this: "Anteater"
-    //      ++i)                                           //"Lemur”,"'Penguin”,
-    //     cout << *i << endl;
-
-    for_each(ssp.begin(), ssp.end(), print);
+    std::cout << "\n";
 
     return 0;
 }
