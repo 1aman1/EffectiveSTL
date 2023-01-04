@@ -10,11 +10,15 @@ int main()
 
     auto itr = std::find(vec.begin(), vec.end(), 2);
 
-    std::cout << *itr;
+    std::cout << *itr << "\n";
+
+    std::cout << vec.size() << "\n";
 
     std::vector<int>(vec).swap(vec);
 
-    std::cout << *itr;
+    std::cout << *itr << "\n";
+
+    std::cout << vec.size() << "\n";
 
     return 0;
 }
