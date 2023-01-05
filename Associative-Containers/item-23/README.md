@@ -1,6 +1,6 @@
 __Consider replacing associative containers with sorted vectors__
 
-* Many STL programmers, when faced with the need for a data structure offering fast lookups, immediately think of the standard associative containers, set, multiset, map, and multimap. 
+* When we are faced with the need for a data structure offering fast lookups, we immediately think of the standard associative containers, set, multiset, map, and multimap. 
 
 * If lookup speed is really important, it's almost certainly worthwhile to consider the nonstandard hashed containers as well
 
@@ -29,3 +29,5 @@ __Consider replacing associative containers with sorted vectors__
 * Of course, the big drawback of a sorted vector is that it **must remain sorted**! When a new element is inserted, everything beyond the new element must be moved up by one. That's **as expensive as it sounds**, and it gets even more expensive if the vector has to reallocate its underlying memory, because then all the elements in the vector typically have to be copied. 
 
 * Similarly, Insertions and erasures are expensive for vectors, but they're cheap for associative containers. That's why it makes sense to consider using a sorted vector instead of an associative container only when you know that your data structure is used in such a way that ***lookups are almost never mixed with insertions and erasures***
+
+* When tweaking a vector to hold third party data, we may need to provide sorting & lookup function based on value/pair.
